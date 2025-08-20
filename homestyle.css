@@ -1,0 +1,123 @@
+body{ 
+	background: linear-gradient(45deg, lightgreen, lightsalmon, lightgreen);
+	background-attachment: fixed;
+}
+.meun{
+	background: linear-gradient(45deg, black, deeppink);
+	width: 100%;
+	
+}
+.meun a{
+	
+	color:blue;
+	text-decoration:none;
+	font-size:40px;
+	padding:10px 25px;
+	padding-left:20px;
+	display:inline-block;
+	margin-left: 25px;
+}
+.meun a:hover{
+		background: linear-gradient(45deg,red,black,red);
+		border-radius:50px;
+}
+.first h1{
+		text-align:center;
+		font-size:60px;
+		font-family: "Comic sans MS",sans-serif;
+}
+.first p {
+		text-align: center;
+}
+.first h2{
+		background: linear-gradient(45deg,red,black,red);
+		padding:15px;
+		border-radius:50%;
+		width:800px;
+		margin:auto;
+		box-shadow:0 0 10px black;
+		text-align:center;
+		font-size:30px;
+		color:white;
+}
+table{
+	width: 100%;
+	margin-top: 50px;
+	
+}
+img{
+	border-radius: 10px;
+}
+p{
+	text-align: center;
+}
+#burgers h2{
+		background: linear-gradient(45deg,red,black,red);
+		padding:15px;
+		border-radius:50%;
+		width:800px;
+		margin:auto;
+		box-shadow:0 0 10px black;
+		text-align:center;
+		font-size:30px;
+		color:white;
+		margin-top: 50px;
+}
+#fries h2{
+		background: linear-gradient(45deg,red,black,red);
+		padding:15px;
+		border-radius:50%;
+		width:800px;
+		margin:auto;
+		box-shadow:0 0 10px black;
+		text-align:center;
+		font-size:30px;
+		color:white;
+		margin-top: 50px;
+}
+#greens h2{
+		background: linear-gradient(45deg,red,black,red);
+		padding:15px;
+		border-radius:50%;
+		width:800px;
+		margin:auto;
+		box-shadow:0 0 10px black;
+		text-align:center;
+		font-size:30px;
+		color:white;
+		margin-top: 50px;
+}
+#noodles h2{
+		background: linear-gradient(45deg,red,black,red);
+		padding:15px;
+		border-radius:50%;
+		width:800px;
+		margin:auto;
+		box-shadow:0 0 10px black;
+		text-align:center;
+		font-size:30px;
+		color:white;
+		margin-top: 50px;
+}
+#deserts h2{
+		background: linear-gradient(45deg,red,black,red);
+		padding:15px;
+		border-radius:50%;
+		width:800px;
+		margin:auto;
+		box-shadow:0 0 10px black;
+		text-align:center;
+		font-size:30px;
+		color:white;
+		margin-top: 50px;
+}
+#footer h2{
+		background: linear-gradient(45deg,red,black,red);
+		padding:15px;
+		margin:auto;
+		box-shadow:0 0 10px black;
+		text-align:center;
+		font-size:30px;
+		color:white;
+		margin-top: 50px;
+}
