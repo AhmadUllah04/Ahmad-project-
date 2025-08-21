@@ -1,0 +1,181 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #ec8ee4 0%, #23111a 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            color: #333;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .form_container {
+            background: rgb(227, 162, 212);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form_container input {
+            padding: 14px;
+            border: 2px solid #DDD;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form_container input:focus {
+            border-color: #a6c5f6;
+            outline: none;
+        }
+        
+        #button {
+            background: linear-gradient(to right, #e89ce1, #88aceb);
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        #button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .outputdiv {
+            background: rgb(236, 209, 229);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            margin-top: 20px;
+        }
+        
+        .output-item {
+            background: #efbfe5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .output-item p {
+            margin: 5px 0;
+        }
+        
+        .btn-container {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .delete-btn, .edit-btn {
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .delete-btn {
+            background: #ff4757;
+        }
+        
+        .delete-btn:hover {
+            background: #ff2e43;
+        }
+        
+        .edit-btn {
+            background: #46e789;
+        }
+        
+        .edit-btn:hover {
+            background: #25b560;
+        }
+        
+        .save-btn {
+            background: white;
+        }
+        
+        .save-btn:hover {
+            background: #2a34e0;
+        }
+        
+        .cancel-btn {
+            background: #a4b0be;
+        }
+        
+        .cancel-btn:hover {
+            background: #939ea9;
+        }
+        
+        .div {
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .instructions {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .edit-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .edit-form input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
