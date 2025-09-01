@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="indix.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="main_box">
+        <input type="checkbox" id="check"/>
+        <div class="btn_one">
+            <label for="check">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <!-- Main Content -->
+        <div class="content" id="main-content">
+            <marquee behavior=""  direction="left"><h1>Education System By Ahmad Ullah</h1></marquee>
+            <p>Transforming Learning Experiences Through Innovation</p>
+            <a href="#" class="btn" id="registerBtn">REGISTER NOW</a>
+        </div>
+        
+        <!-- Registration Form -->
+        <div class="form-popup" id="registrationForm">
+            <div class="form-container">
+                <h2>Student Registration Form</h2>
+                <form id="studentForm">
+                    <div class="form-row">
+                        <div class="form-column">
+                            <label for="fname"><b>First Name</b></label>
+                            <input type="text" placeholder="First Name" name="fname" required>
+                        </div>
+                        <div class="form-column">
+                            <label for="lname"><b>Last Name</b></label>
+                            <input type="text" placeholder="Last Name" name="lname" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-column">
+                            <label for="email"><b>Email</b></label>
+                            <input type="email" placeholder="Email" name="email" required>
+                        </div>
+                        <div class="form-column">
+                            <label for="phone"><b>Phone Number</b></label>
+                            <input type="tel" placeholder="Phone Number" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <label for="course"><b>Select Course</b></label>
+                    <select name="course" required>
+                        <option value="">-- Select a Course --</option>
+                        <option value="cs">Computer Science</option>
+                        <option value="eng">English</option>
+                        <option value="engi">Engineering</option>
+                        <option value="bus">Business Administration</option>
+                        <option value="art">Arts and Humanities</option>
+                    </select>
+                    
+                    <div class="form-row">
+                        <div class="form-column">
+                            <label for="dob"><b>Date of Birth</b></label>
+                            <input type="text" placeholder="DD/MM/YYYY" name="dob" required>
+                        </div>
+                        <div class="form-column">
+                            <label for="gender"><b>Select Gender</b></label>
+                            <select name="gender" required>
+                                <option value="">-- Select Gender --</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <label for="address"><b>Address</b></label>
+                    <textarea name="address" placeholder="Enter your full address" rows="2" required></textarea>
+                    
+                    <label for="city"><b>City</b></label>
+                    <input type="text" placeholder="Enter City" name="city" required>
+                    
+                    <label for="education"><b>Previous Education</b></label>
+                    <select name="education" required>
+                        <option value="">-- Select Education Level --</option>
+                        <option value="highschool">High School</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="bachelor">Bachelor's Degree</option>
+                        <option value="master">Master's Degree</option>
+                    </select>
+                    
+                    <button type="submit" class="btn">Register</button>
+                    <button type="button" class="btn cancel" id="closeForm">Close</button>
+                </form>
+            </div>
+        </div>
+          
+        <!-- Courses Page -->
+        <div class="page-section" id="courses-page">
+            <a href="#" class="btn back-btn" onclick="showMainContent()">Back to Home</a>
+            <h2>Available Courses</h2>
+            <div class="course-list" id="course-list">
+                <div class="course-card" data-name="Computer Science" data-duration="4">
+                    <h3>Computer Science</h3>
+                    <p>Learn programming, algorithms, web development and software development.</p>
+                    <p><strong>Duration:</strong> 4 years</p><br>
+                    <button class="btn">Enroll Now</button>
+                </div>
+                <div class="course-card" data-name="Business Administration" data-duration="3">
+                    <h3>Business Administration</h3>
+                    <p>Master business management and leadership skills.</p>
+                    <p><strong>Duration:</strong> 3 years</p><br>
+                    <button class="btn">Enroll Now</button>
+                </div>
+                <div class="course-card" data-name="Electrical Engineering" data-duration="4">
+                    <h3>English Department</h3>
+                    <p>English is a powerful global tool that helps us communicate, learn, and create opportunities just like technology.</p>
+                    <p><strong>Duration:</strong> 4 years</p><br>
+                    <button class="btn">Enroll Now</button>
+                </div>
+                <div class="course-card" data-name="Medicine" data-duration="6">
+                    <h3>Medicine</h3>
+                    <p>Become a medical professional with our comprehensive program.</p>
+                    <p><strong>Duration:</strong> 6 years</p><br>
+                    <button class="btn">Enroll Now</button>
+                </div>
+                <div class="course-card" data-name="Graphic Design" data-duration="3">
+                    <h3>Graphic Design</h3>
+                    <p>Develop creative skills in visual communication.</p>
+                    <p><strong>Duration:</strong> 3 years</p><br>
+                    <button class="btn">Enroll Now</button>
+                </div>
+                <div class="course-card" data-name="Psychology" data-duration="4">
+                    <h3>Psychology</h3>
+                    <p>Study human behavior and mental processes.</p>
+                    <p><strong>Duration:</strong> 4 years</p><br>
+                    <button class="btn">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+
+          <!-- Library Page -->
+        <div class="page-section" id="library-page">
+            <a href="#" class="btn back-btn" onclick="showMainContent()">Back to Home</a>
+            <h2>Library Resources</h2>
+            <div class="sort-controls">
+                <!-- <label for="sort-resources">Sort by:</label>
+                <select id="sort-resources" onchange="sortResources()">
+                    <option value="name-asc">Name (A-Z)</option>
+                    <option value="name-desc">Name (Z-A)</option>
+                </select> -->
+            </div>
+            <div class="library-resources" id="resource-list">
+                <div class="resource-item" data-name="Textbooks">
+                    <h3><i class="fa-solid fa-book"></i> Textbooks</h3>
+                    <p>Access required textbooks for all courses.</p>
+                </div>
+                <div class="resource-item" data-name="Research Papers">
+                    <h3><i class="fa-solid fa-newspaper"></i> Research Papers</h3>
+                    <p>Browse our collection of academic journals.</p>
+                </div>
+                <div class="resource-item" data-name="E-Library">
+                    <h3><i class="fa-solid fa-laptop"></i> E-Library</h3>
+                    <p>Digital resources available 24/7.</p>
+                </div>
+                <div class="resource-item" data-name="Audio Books">
+                    <h3><i class="fa-solid fa-microphone"></i> Audio Books</h3>
+                    <p>Listen to educational content on the go.</p>
+                </div>
+                <div class="resource-item" data-name="Study Rooms">
+                    <h3><i class="fa-solid fa-calendar"></i> Study Rooms</h3>
+                    <p>Reserve private rooms for group study.</p>
+                </div>
+                <div class="resource-item" data-name="Library Workshops">
+                    <h3><i class="fa-solid fa-chalkboard-user"></i> Library Workshops</h3>
+                    <p>Learn research skills and citation methods.</p>
+                </div>
+            </div>
+        </div>
+         <!-- Schedule Page -->
+        <div class="page-section" id="schedule-page">
+            <a href="#" class="btn back-btn" onclick="showMainContent()">Back to Home</a>
+            <h2>Academic Schedule</h2>
+            <div class="filter-controls">
+                <!-- <label for="filter-schedule">Filter by Day:</label> -->
+                <!-- <select id="filter-schedule" onchange="filterSchedule()">
+                    <option value="all">All Days</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                </select> -->
+            </div>
+            <div class="schedule-container">
+                <table class="schedule-table" id="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th data-day="Monday">Monday</th>
+                            <th data-day="Tuesday">Tuesday</th>
+                            <th data-day="Wednesday">Wednesday</th>
+                            <th data-day="Thursday">Thursday</th>
+                            <th data-day="Friday">Friday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>9:00 - 10:00</td>
+                            <td data-day="Monday">Computer Science</td>
+                            <td data-day="Tuesday">Mathematics</td>
+                            <td data-day="Wednesday">Computer Science</td>
+                            <td data-day="Thursday">Mathematics</td>
+                            <td data-day="Friday">Programming Lab</td>
+                        </tr>
+                        <tr>
+                            <td>10:00 - 11:00</td>
+                            <td data-day="Monday">Physics</td>
+                            <td data-day="Tuesday">Computer Science</td>
+                            <td data-day="Wednesday">English</td>
+                            <td data-day="Thursday">Computer Science</td>
+                            <td data-day="Friday">Programming Lab</td>
+                        </tr>
+                        <tr>
+                            <td>11:00 - 12:00</td>
+                            <td data-day="Monday">Mathematics</td>
+                            <td data-day="Tuesday">English </td>
+                            <td data-day="Wednesday">Mathematics</td>
+                            <td data-day="Thursday">Physics</td>
+                            <td data-day="Friday">Seminar</td>
+                        </tr>
+                        <tr>
+                            <td>12:00 - 1:00</td>
+                            <td colspan="5" style="text-align: center; background: rgba(255,255,255,0.2);">Lunch Break</td>
+                        </tr>
+                        <tr>
+                            <td>1:00 - 2:00</td>
+                            <td data-day="Monday">Elective</td>
+                            <td data-day="Tuesday">Elective</td>
+                            <td data-day="Wednesday">Elective</td>
+                            <td data-day="Thursday">Elective</td>
+                            <td data-day="Friday">Project Work</td>
+                        </tr>
+                        <tr>
+                            <td>2:00 - 3:00</td>
+                            <td data-day="Monday">Lab Session</td>
+                            <td data-day="Tuesday">Lab Session</td>
+                            <td data-day="Wednesday">Lab Session</td>
+                            <td data-day="Thursday">Lab Session</td>
+                            <td data-day="Friday">Project Work</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Faculty Page -->
+        <div class="page-section" id="faculty-page">
+            <a href="#" class="btn back-btn" onclick="showMainContent()">Back to Home</a>
+            <h2>Faculty & Departments</h2>
+            <div class="sort-controls">
+                <!-- <label for="sort-faculty">Sort Faculty by:</label>
+                <select id="sort-faculty" onchange="sortFaculty()">
+                    <option value="name-asc">Name (A-Z)</option>
+                    <option value="name-desc">Name (Z-A)</option>
+                    <option value="role">Role (Head First)</option>
+                </select> -->
+            </div>
+            <div class="department-list" id="department-list">
+                <div class="department" data-department="Computer Science">
+                    <h3>Computer Science Department</h3>
+                    <div class="faculty-members" id="cs-faculty">
+                        <div class="faculty-card" data-name="Mr. Ahmad Ullah" data-role="Head of Department">
+                            <img src="images/ahmadkhan.jpeg" alt="Professor">
+                            <h4>Mr. Ahmad Ullah</h4>
+                            <p>Head of Project</p>
+                            <p>Web development</p>
+                        </div>
+                        <div class="faculty-card" data-name="Mr. Zeeshan Ahmad" data-role="Professor">
+                            <img src="images/zeeshan.jpeg" alt="Professor">
+                            <h4>Mr. Zeeshan Ahmad</h4>
+                            <p>Data Science</p>
+                            <p>Machine Learning</p>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="department" data-department="Business">
+                    <h3>Business Department</h3>
+                    <div class="faculty-members" id="business-faculty">
+                        <div class="faculty-card" data-name="Prof. Ahmad Noor" data-role="Professor">
+                            <img src="images/atiq.jpg" alt="Professor">
+                            <h4>Prof. Atiq Ullah</h4>
+                            <p>Finance</p>
+                            <p>Investment Banking</p>
+                        </div>
+                         <div class="faculty-card" data-name="Mr. Rafi Ullah" data-role="Head of Department">
+                            <img src="images/rafikahn.jpeg" alt="Professor">
+                            <h4>Mr. Rafi Ullah</h4>
+                            <p>Business Management</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="department" data-department="Business">
+                    <h3>English Department</h3>
+                    <div class="faculty-members" id="business-faculty">
+                        <div class="faculty-card" data-name="Prof.Tufail OKZ" data-role="Professor">
+                            <img src="images/tufailkhan.jpeg" alt="Professor">
+                            <h4>Prof. Tufail Okz</h4>
+                            <p>Grammar & Vocabulary Mastery</p>
+                            <p>Business Writing (Proposals, Resumes)</p>
+                        </div>
+                        <div class="faculty-card" data-name="Prof. Ahmad Noor" data-role="Professor">
+                            <img src="images/ahmadnoor.jpeg" alt="Professor">
+                            <h4>Prof. Ahmad Noor</h4>
+                            <p>Public Speaking & Presentation skills</p>
+                            <p>Debating & Critiacl Thinking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Campus Store Page -->
+        <div class="page-section" id="store-page">
+            <a href="#" class="btn back-btn" onclick="showMainContent()">Back to Home</a>
+            <h2>Campus Store</h2>
+            <div class="sort-controls">
+                <!-- <label for="sort-store">Sort by:</label>
+                <select id="sort-store" onchange="sortStoreItems()">
+                    <option value="name-asc">Name (A-Z)</option>
+                    <option value="name-desc">Name (Z-A)</option>
+                </select> -->
+            </div>
+            <div class="store-items" id="store-list">
+                <div class="store-item" data-name="Textbooks">
+                    <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Textbooks">
+                    <h3>Textbooks</h3>
+                    <p>All required course materials</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+                <div class="store-item" data-name="Stationery">
+                    <img src="images/stat.png" alt="Stationery">
+                    <h3>Stationery</h3>
+                    <p>Pens, notebooks, and more</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+                <div class="store-item" data-name="University Merch">
+                    <img src="images/Shop.png" alt="University Merch">
+                    <h3>University Merch</h3>
+                    <p>T-shirts, hoodies, and caps</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+                <div class="store-item" data-name="Electronics">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Electronics">
+                    <h3>Electronics</h3>
+                    <p>Laptops, tablets, and accessories</p>
+                    <button class="btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Page -->
+        <div class="page-section" id="contact-page">
+            <a href="#" class="btn back-btn" onclick="showMainContent()">Back to Home</a>
+            <h2>Contact Us</h2>
+            <div class="contact-methods">
+                <div class="contact-info">
+                    <h3><i class="fa-solid fa-location-dot"></i> Address</h3>
+                    <p> Education Street</p>
+                    <p>Academic City, kohat</p>
+                </div>
+                <div class="contact-info">
+                    <h3><i class="fa-solid fa-phone"></i> Phone</h3>
+                    <p>Admissions: (+92) 331-9444663</p>
+                    <p>Administration:(+92) 331-9444663</p>
+                </div>
+                <div class="contact-info">
+                    <h3><i class="fa-solid fa-envelope"></i> Email</h3>
+                    <p>Admissions: ahamdjani2199@gmail.com</p>
+                    <p>Info: ahamdjani2199@gmail.com</p>
+                </div>
+                <div class="contact-info">
+                    <h3><i class="fa-solid fa-clock"></i> Office Hours</h3>
+                    <p>Monday-Friday: 9:00 AM - 5:00 PM</p>
+                    <p>Saturday: 10:00 AM - 2:00 PM</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Feedback Page -->
+        <div class="page-section" id="feedback-page">
+            <a href="#" class="btn back-btn" onclick="showMainContent()">Back to Home</a>
+            <h2>Student Feedback</h2>
+            <div class="feedback-form">
+                <form>
+                    <div class="form-group">
+                        <label for="feedback-name">Full Name</label>
+                        <input type="text" id="feedback-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback-email">Email Address</label>
+                        <input type="email" id="feedback-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback-type">Feedback Type</label>
+                        <select id="feedback-type">
+                            <option value="">Select feedback type</option>
+                            <option value="academic">Academic</option>
+                            <option value="facility">Facilities</option>
+                            <option value="faculty">Faculty</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback-message">Your Feedback</label>
+                        <textarea id="feedback-message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+   
+        
+        <div class="sidebar_menu">
+            <div class="logo">
+                <a href="#">Education System</a>
+            </div>
+            <div class="btn_two">
+                <label for="check" style="color: grey">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><i class="fa-solid fa-graduation-cap"></i><a href="#" onclick="showSection('courses-page')">Courses</a></li>
+                    <li><i class="fa-solid fa-book"></i><a href="#" onclick="showSection('library-page')">Library</a></li>
+                    <li><i class="fa-solid fa-calendar-days"></i><a href="#" onclick="showSection('schedule-page')">Schedule</a></li>
+                    <li><i class="fa-solid fa-chalkboard-user"></i><a href="#" onclick="showSection('faculty-page')">Faculty</a></li>
+                    <li><i class="fa-solid fa-store"></i><a href="#" onclick="showSection('store-page')">Campus Store</a></li>
+                    <li><i class="fa-solid fa-phone"></i><a href="#" onclick="showSection('contact-page')">Contact</a></li>
+                    <li><i class="fa-regular fa-comments"></i><a href="#" onclick="showSection('feedback-page')">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="social_media">
+                <ul>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="indix.js">
+    </script>
+</body>
+</html>
